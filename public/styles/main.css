@@ -1,0 +1,48 @@
+html {
+    height: 100vh;
+    background: rgb(221,237,255);
+    background: linear-gradient(180deg, rgba(221,237,255,1) 23%, rgba(99,170,255,1) 100%);
+}
+
+.nav-bar {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    padding-right: 30px;
+}
+
+.nav-item:last-child {
+    padding-right: 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    text-decoration: none;
+    color: #34649b
+}
+
+.nav-item, a:visited, a:hover, a:active {
+    color: #34649b;
+}
+
+.nav-img {
+    max-width: 20px;
+    max-height: 20px;
+
+    margin-right: 5px;
+}
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
