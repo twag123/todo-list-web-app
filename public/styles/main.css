@@ -1,7 +1,17 @@
 html {
-    height: 100vh;
     background: rgb(221,237,255);
     background: linear-gradient(180deg, rgba(221,237,255,1) 23%, rgba(99,170,255,1) 100%);
+
+    min-height: 1000px;
+    position: relative;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    height: 100%;
 }
 
 .nav-bar {
@@ -38,11 +48,62 @@ html {
     margin-right: 5px;
 }
 
+#heading-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    padding: 50px 0 50px 0;
+}
+
+#date-heading {
+    text-align: center;
+    color: white;
+    background-color: #34649b;
+
+    min-width: 300px;
+    height: fit-content;
+
+    padding: 10px 0 10px 0;
+
+    border-radius: 5px;
+}
+
+#list-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 50px 0 50px 0;
+}
+
+.list-item {
+    display: flex;
+    justify-content: center;
+
+    background-color: whitesmoke;
+    min-width: 300px;
+
+    padding: 10px;
+}
+
+#list-item-single {
+    border-radius: 5px;
+}
+
+#list-item-top {
+    border-radius: 5px 5px 0 0;
+}
+
+#list-item-bottom {
+    border-radius: 0 0 5px 5px;
+}
+
 
 
 footer {
-    position: fixed;
-    left: 0;
+    position: absolute;
+    
     bottom: 0;
-    width: 100%;
 }

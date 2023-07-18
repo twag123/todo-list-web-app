@@ -1,0 +1,31 @@
+
+
+<% if(locals.itemList) { %>
+
+    <% for (var i = 0; i < itemList.length; i++) { %>
+        <% if (i == 0) { %>
+            <div class="list-item" id="list-item-top"> <%= itemList[i] %> </div>
+        <% } else { %>
+            <div class="list-item"> <p> <%= itemList[i] %> </p> </div>
+        <% } %>
+    <% } %>
+
+    <div id="list-item-bottom" class="list-item">
+        <form id="submission-item" action="/" method="POST">
+            <input type="text" name="newItem" placeholder="New Item">
+            <input type="submit" value="+">
+        </form>
+    </div>
+
+<% } else { %>
+
+    <div id="list-item-single" class="list-item">
+        <form id="submission-item" action="/" method="POST">
+            <input type="text" name="newItem" placeholder="New Item">
+            <input type="submit" value="+">
+        </form>
+    </div>
+
+<% } %>
+
+
