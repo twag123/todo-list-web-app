@@ -12,6 +12,8 @@ const port = 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+var homeList = ["first item", "second item", "this is a really long item on the list so it should fill out a lot of the box"];
+
 
 function getDate() {
     var days = [
@@ -48,7 +50,8 @@ function getDate() {
 
 app.get("/", (req, res) => {
     res.render("index.ejs", {
-        date: getDate()
+        date: getDate(),
+        itemList: homeList
     });
 });
 

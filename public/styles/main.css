@@ -1,6 +1,6 @@
 html {
-    background: rgb(221,237,255);
-    background: linear-gradient(180deg, rgba(221,237,255,1) 23%, rgba(99,170,255,1) 100%);
+    background-image: -webkit-linear-gradient(65deg, rgba(99,170,255,1) 50%, rgb(221,237,255,1) 50%);
+    background-color: rgb(221,237,255,1);
 
     min-height: 1000px;
     position: relative;
@@ -8,6 +8,7 @@ html {
 
 body {
     height: 100%;
+
 }
 
 main {
@@ -53,7 +54,7 @@ main {
     width: 100%;
     justify-content: center;
 
-    padding: 50px 0 50px 0;
+    padding: 50px 0 10px 0;
 }
 
 #date-heading {
@@ -66,6 +67,7 @@ main {
 
     padding: 10px 0 10px 0;
 
+    filter: drop-shadow(4px 4px 10px rgb(123, 123, 123));
     border-radius: 5px;
 }
 
@@ -75,17 +77,24 @@ main {
 
     align-items: center;
 
-    padding: 50px 0 50px 0;
+    padding: 30px 0 50px 0;
+}
+
+#list {
+    filter: drop-shadow(4px 4px 10px rgb(123, 123, 123));
+
+    max-width: 300px;
 }
 
 .list-item {
     display: flex;
-    justify-content: center;
+    align-items: center;
 
     background-color: whitesmoke;
     min-width: 300px;
+    max-width: 300px;
 
-    padding: 10px;
+    
 }
 
 #list-item-single {
@@ -98,6 +107,25 @@ main {
 
 #list-item-bottom {
     border-radius: 0 0 5px 5px;
+}
+
+.list-elem {
+    margin-right: 20px;
+    margin-left: 15px;
+
+}
+
+.list-elem:last-child {
+    margin-left: 0;
+
+    text-align: center;
+
+    font-size: 1.15rem;
+    color: rgb(47, 47, 47);
+}
+
+#submission-item {
+    padding: 10px;
 }
 
 
