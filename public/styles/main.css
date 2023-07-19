@@ -91,6 +91,7 @@ main {
 
 .list-item {
     display: flex;
+    align-items: center;
 
     background-color: whitesmoke;
     min-width: 300px;
@@ -116,11 +117,13 @@ main {
 .list-elem {
     margin-right: 20px;
     margin-left: 15px;
-
+    height: fit-content;
 }
 
 .list-elem:last-child {
     margin-left: 0;
+    min-height: 1.15rem;
+    min-width: 1.15rem;
 
     text-align: center;
 
@@ -171,6 +174,5 @@ button {
 
 footer {
     position: absolute;
-    
     bottom: 0;
 }

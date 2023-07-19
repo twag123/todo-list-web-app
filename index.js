@@ -12,9 +12,9 @@ const port = 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-var homeList = ["first item", "second item", "this is a really long item on the list so it should fill out a lot of the box"];
+var homeList = [];
 
-
+// Get current date as a formatted string
 function getDate() {
     var days = [
     'Sunday',
@@ -48,12 +48,25 @@ function getDate() {
     return (dayName + ', ' + month + ' ' + dayNumb);
 }
 
+// Root get
 app.get("/", (req, res) => {
+    // Render the page
     res.render("index.ejs", {
         date: getDate(),
         itemList: homeList
     });
 });
+
+// Root post
+app.post("/", (req, res) => {
+    // Add new item to the list
+    homeList.push(req.body.newItem);
+    
+    // Redirect to root get
+    res.redirect("/");
+});
+
+
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
