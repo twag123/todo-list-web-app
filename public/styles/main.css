@@ -135,6 +135,11 @@ main {
     color: rgb(47, 47, 47);
 }
 
+input:checked + p {
+    text-decoration: line-through;
+    text-decoration-color: #144e90;
+}
+
 #submission-item {
     padding: 10px;
     width: 100%;
@@ -177,4 +182,22 @@ button {
 footer {
     position: absolute;
     bottom: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 0 0 10px 10px;
+
+    font-size: 1.15rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+footer > a {
+    color: rgb(2, 2, 134);
+}
+
+footer > a:visited, a:hover, a:active {
+    color: rgb(2, 2, 134);
 }
