@@ -35,7 +35,8 @@ main {
 
     border: none;
     text-decoration: none;
-    color: #34649b
+    color: #34649b;
+    font-family: 'Lato', sans-serif;
 }
 
 .nav-item, a:visited, a:hover, a:active {
@@ -60,6 +61,8 @@ main {
 #date-heading {
     text-align: center;
     color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     background-color: #34649b;
 
     min-width: 300px;
@@ -88,25 +91,26 @@ main {
 
 .list-item {
     display: flex;
-    align-items: center;
 
     background-color: whitesmoke;
     min-width: 300px;
     max-width: 300px;
 
-    
-}
-
-#list-item-single {
-    border-radius: 5px;
+    border-bottom: 1px solid rgb(204, 204, 204);
 }
 
 #list-item-top {
     border-radius: 5px 5px 0 0;
 }
 
+#list-item-single {
+    border-radius: 5px;
+    justify-content: center;
+}
+
 #list-item-bottom {
     border-radius: 0 0 5px 5px;
+    justify-content: center;
 }
 
 .list-elem {
@@ -120,14 +124,49 @@ main {
 
     text-align: center;
 
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     font-size: 1.15rem;
     color: rgb(47, 47, 47);
 }
 
 #submission-item {
     padding: 10px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
 }
 
+input[type=text] {
+    width: 75%;
+
+    text-align: center;
+    font-size: 1.15rem;
+    font-family: 'Lato', sans-serif;
+
+    border: none;
+    background-color: whitesmoke;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-bottom: 3px solid rgba(99,170,255,1) !important;
+
+    margin-bottom: -3px;
+}
+
+button {
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(99,170,255,1);
+
+    color: rgb(221,237,255,1);
+    font-size: 1.5rem;
+
+    width: 50px;
+    height: 50px;
+}
 
 
 footer {
