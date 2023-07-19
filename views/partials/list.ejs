@@ -17,8 +17,8 @@
         <% } %>
 
         <div id="list-item-bottom" class="list-item">
-            <form id="submission-item" action="/" method="POST">
-                <input type="text" name="newItem" placeholder="New Item">
+            <form id="submission-item" action=<%=page%> method="POST">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
                 <button type="submit">+</button>
             </form>
         </div>
@@ -26,8 +26,8 @@
     <% } else { %>
 
         <div id="list-item-single" class="list-item">
-            <form id="submission-item" action="/" method="POST">
-                <input type="text" name="newItem" placeholder="New Item">
+            <form id="submission-item" action=<%=page%> method="POST">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
                 <button id="submit" type="submit">+</button>
             </form>
         </div>
