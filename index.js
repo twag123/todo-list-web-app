@@ -1,10 +1,9 @@
 import express from "express";
 import { dirname } from "path";
-
 import bodyParser from "body-parser";
-
 import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
+import { getDate } from "./date.js";
 
 const app = express();
 const port = 3000;
@@ -15,39 +14,7 @@ app.use(express.static("public"));
 var homeList = [];
 var workList = [];
 
-// Get current date as a formatted string
-function getDate() {
-    var days = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday'];
 
-    var months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'];
-
-    var dateObj = new Date();
-
-    var dayName = days[dateObj.getDay()];
-    var month = months[dateObj.getMonth()];
-    var dayNumb = dateObj.getDate().toString();
-
-    return (dayName + ', ' + month + ' ' + dayNumb);
-}
 
 // Root get
 app.get("/", (req, res) => {
