@@ -1,2 +1,7 @@
 # ignore node_modules directory
 node_modules/
+
+# add ignores for heroku
+npm-debug.log
+.DS_Store
+/*.env
