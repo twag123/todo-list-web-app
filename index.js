@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // Connect to MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+mongoose.connect("mongodb+srv://tyler-admin:Password123!@cluster0.rmdkllu.mongodb.net/todolistDB");
 
 // Create schema for collection
 const itemsSchema = mongoose.Schema({
@@ -120,13 +120,13 @@ app.post("/", (req, res) => {
             // Add the item
             foundList.items.push(item);
             foundList.save();
+
+            // Redirect to root
+            res.redirect("/");
         })
         .catch( (err) => {
             console.log(err);
         });
-    
-    // Redirect to root
-    res.redirect("/");
 });
 
 // Work post
@@ -143,13 +143,13 @@ app.post("/work", (req, res) => {
             // Add the item
             foundList.items.push(item);
             foundList.save();
+
+            // Redirect to work
+            res.redirect("/work")
         })
         .catch( (err) => {
             console.log(err);
         });
-    
-    // Redirect to work
-    res.redirect("/work");
 });
 
 app.post("/delete", (req, res) => {
