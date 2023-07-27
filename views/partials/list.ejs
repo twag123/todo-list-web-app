@@ -4,15 +4,17 @@
 
         <% for (var i = 0; i < itemList.length; i++) { %>
             <% if (i == 0) { %>
-                <div class="list-item" id="list-item-top"> 
-                    <input class="list-elem" type="checkbox">
-                    <p class="list-elem"> <%= itemList[i] %> </p>
-                </div>
+                <form class="list-item" id="list-item-top" action="/delete" method="post">
+                    <input class="list-elem" type="checkbox" onChange="this.form.submit()" name="checkbox" value="<%=itemList[i]._id%>">
+                    <p class="list-elem"> <%= itemList[i].name %> </p>
+                    <input type="hidden" name="pageName" value="<%=page%>"></input>
+                </form>
             <% } else { %>
-                <div class="list-item"> 
-                    <input class="list-elem" type="checkbox">
-                    <p class="list-elem"> <%= itemList[i] %> </p>
-                </div>
+                <form class="list-item" action="/delete" method="post">
+                    <input class="list-elem" type="checkbox" onChange="this.form.submit()" name="checkbox" value="<%=itemList[i]._id%>">
+                    <p class="list-elem"> <%= itemList[i].name %> </p>
+                    <input type="hidden" name="pageName" value="<%=page%>"></input>
+                </form>
             <% } %>
         <% } %>
 
